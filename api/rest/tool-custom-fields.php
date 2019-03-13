@@ -76,7 +76,8 @@ function get_tag_list($object, $field_name, $request){
 
 function download_file($object, $field_name, $request){
   $files = get_post_meta($object['id'], 'tool_version_group', true);
-  return $files;
+  $last_version = end($files);
+  return wp_get_attachment_url($last_version['tool_version_file'][0]);
 }
 
 function song_get_post_meta_cb($object, $field_name, $request){
