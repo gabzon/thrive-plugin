@@ -112,6 +112,11 @@ class Thrive {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-thrive-i18n.php';
 
 		/**
+		 * This file is responsible for defining default settings
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/thrive-defaults.php';
+
+		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-thrive-admin.php';
@@ -204,6 +209,8 @@ class Thrive {
 		require plugin_dir_path( dirname( __FILE__ ) ) . 'models/taxonomy/phase.php';
 		require plugin_dir_path( dirname( __FILE__ ) ) . 'models/taxonomy/mindset.php';
 	}
+
+
 
 	/**
 	 * Run the loader to execute all of the hooks with WordPress.
